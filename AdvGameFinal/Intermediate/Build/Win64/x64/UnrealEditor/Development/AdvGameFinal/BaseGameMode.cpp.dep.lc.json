@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\private\\basegamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\advgamefinaleditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advgamefinal\\definitions.advgamefinal.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\basegamemode.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\basegamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

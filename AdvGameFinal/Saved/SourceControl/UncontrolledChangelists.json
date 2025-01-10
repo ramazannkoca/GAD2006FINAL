@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/Main.umap",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/BP_Avatar.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/GM_Base.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/FirstPerson/Input/IMC_Default.uasset"
+			]
+		}
+	]
+}

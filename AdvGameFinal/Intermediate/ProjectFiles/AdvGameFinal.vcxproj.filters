@@ -11,6 +11,8 @@
     <None Include="..\..\Source\AdvGameFinalEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +39,30 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\AdvGameFinal\AdvGameFinal.h">
       <Filter>Source\AdvGameFinal</Filter>
+    </ClInclude>
+    <Filter Include="Source\AdvGameFinal\Private">
+      <UniqueIdentifier>{010C12A4-72FA-3572-8CFF-B06EB67BEAB1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AdvGameFinal\Private\Avatar.cpp">
+      <Filter>Source\AdvGameFinal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AdvGameFinal\Private\AvatarBase.cpp">
+      <Filter>Source\AdvGameFinal\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AdvGameFinal\Private\BaseGameMode.cpp">
+      <Filter>Source\AdvGameFinal\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\AdvGameFinal\Public">
+      <UniqueIdentifier>{15365AF4-9067-35A4-A4D8-53EB23FB66E8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AdvGameFinal\Public\Avatar.h">
+      <Filter>Source\AdvGameFinal\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AdvGameFinal\Public\AvatarBase.h">
+      <Filter>Source\AdvGameFinal\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AdvGameFinal\Public\BaseGameMode.h">
+      <Filter>Source\AdvGameFinal\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
