@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AdvGameFinal",
+			"Path": "..\\Source\\AdvGameFinal.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AdvGameFinalEditor",
+			"Path": "..\\Source\\AdvGameFinalEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
