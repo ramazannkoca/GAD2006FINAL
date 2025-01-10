@@ -35,6 +35,9 @@ void AAvatar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AAvatar::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AAvatar::MoveRight);
+
+
+
 }
 
 void AAvatar::MoveForward(float Scale)
@@ -51,4 +54,10 @@ void AAvatar::MoveRight(float Scale)
 	FRotator YawRotation(0, Rotation.Yaw, 0);
 	FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 	AddMovementInput(ForwardDirection, Scale * MovementState);
+}
+
+void AAvatar::Shoot()
+{
+	const USkeletalMeshSocket* FireLocRef = GetMesh()->GetSocketByName("Muzzle");
+
 }

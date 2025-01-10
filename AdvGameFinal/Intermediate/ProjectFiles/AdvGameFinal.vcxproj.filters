@@ -49,9 +49,6 @@
     <ClCompile Include="..\..\Source\AdvGameFinal\Private\AvatarBase.cpp">
       <Filter>Source\AdvGameFinal\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\AdvGameFinal\Private\BaseGameMode.cpp">
-      <Filter>Source\AdvGameFinal\Private</Filter>
-    </ClCompile>
     <Filter Include="Source\AdvGameFinal\Public">
       <UniqueIdentifier>{15365AF4-9067-35A4-A4D8-53EB23FB66E8}</UniqueIdentifier>
     </Filter>
@@ -59,9 +56,6 @@
       <Filter>Source\AdvGameFinal\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AdvGameFinal\Public\AvatarBase.h">
-      <Filter>Source\AdvGameFinal\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\AdvGameFinal\Public\BaseGameMode.h">
       <Filter>Source\AdvGameFinal\Public</Filter>
     </ClInclude>
   </ItemGroup>

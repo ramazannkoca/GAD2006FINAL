@@ -16,8 +16,48 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_AdvGameFinal();
 // End Cross Module References
+	DEFINE_FUNCTION(AAvatar::execShoot)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Shoot();
+		P_NATIVE_END;
+	}
 	void AAvatar::StaticRegisterNativesAAvatar()
 	{
+		UClass* Class = AAvatar::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Shoot", &AAvatar::execShoot },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAvatar_Shoot_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAvatar_Shoot_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//combat\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Avatar.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "combat" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAvatar_Shoot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAvatar, nullptr, "Shoot", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAvatar_Shoot_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAvatar_Shoot_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AAvatar_Shoot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAvatar_Shoot_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AAvatar);
 	UClass* Z_Construct_UClass_AAvatar_NoRegister()
@@ -27,6 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	struct Z_Construct_UClass_AAvatar_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -59,6 +100,10 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_AdvGameFinal,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAvatar_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAvatar_Shoot, "Shoot" }, // 2105311009
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -121,11 +166,11 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAvatar_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::PropPointers),
 		0,
 		0x008000A4u,
@@ -151,9 +196,9 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 1310422726U) },
+		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 793784326U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_3132804475(TEXT("/Script/AdvGameFinal"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_98939605(TEXT("/Script/AdvGameFinal"),
 		Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -7,8 +7,11 @@
 			"files": [
 				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/Main.umap",
 				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/BP_Avatar.uasset",
-				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/GM_Base.uasset",
-				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/FirstPerson/Input/IMC_Default.uasset"
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/FirstPerson/Input/IMC_Default.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/FirstPersonArms/Animations/FirstPerson_AnimBP.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/FirstPerson/Blueprints/BP_FirstPersonGameMode.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/BPs/BP_Avatar.uasset",
+				"C:/Users/ramaz/Documents/GitHub/GAD2006FINAL/AdvGameFinal/Content/GM_Base.uasset"
 			]
 		}
 	]

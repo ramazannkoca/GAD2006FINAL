@@ -43,4 +43,12 @@ public:
 	UPROPERTY(EditAnywhere)
 	float WalkSpeed;
 
+public:
+	//combat
+
+	UFUNCTION(BlueprintCallable)
+	void Shoot();
+
+
+
 };

@@ -17,6 +17,10 @@
             "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
             "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\avatarbase.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
             "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\avatar.generated.h"
         ],
         "ImportedModules": [],
