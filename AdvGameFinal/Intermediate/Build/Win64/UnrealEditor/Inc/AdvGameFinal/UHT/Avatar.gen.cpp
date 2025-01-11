@@ -12,8 +12,6 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	ADVGAMEFINAL_API UClass* Z_Construct_UClass_AAvatar();
 	ADVGAMEFINAL_API UClass* Z_Construct_UClass_AAvatar_NoRegister();
 	ADVGAMEFINAL_API UClass* Z_Construct_UClass_AAvatarBase();
-	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_AdvGameFinal();
 // End Cross Module References
 	DEFINE_FUNCTION(AAvatar::execShoot)
@@ -72,14 +70,6 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Arm_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Arm;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_RunSpeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
@@ -115,22 +105,6 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	};
 #endif
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::NewProp_Camera_MetaData[] = {
-		{ "Category", "Avatar" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Avatar.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAvatar, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_Camera_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_Camera_MetaData) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::NewProp_Arm_MetaData[] = {
-		{ "Category", "Avatar" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Avatar.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_Arm = { "Arm", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAvatar, Arm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_Arm_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_Arm_MetaData) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::NewProp_RunSpeed_MetaData[] = {
 		{ "Category", "Avatar" },
 		{ "ModuleRelativePath", "Public/Avatar.h" },
@@ -152,8 +126,6 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAvatar, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAvatar_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_Camera,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_Arm,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_RunSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_MovementState,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed,
@@ -196,9 +168,9 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 793784326U) },
+		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 3655805671U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_98939605(TEXT("/Script/AdvGameFinal"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_449270150(TEXT("/Script/AdvGameFinal"),
 		Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

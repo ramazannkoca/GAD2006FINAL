@@ -3,15 +3,14 @@
 
 #include "Avatar.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Engine/SkeletalMeshSocket.h"
+#include "DrawDebugHelpers.h"
 
 
 AAvatar::AAvatar()
 {
-	Arm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
-	Arm->SetupAttachment(RootComponent);
 
-	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Camera->SetupAttachment(Arm, USpringArmComponent::SocketName);
 }
 
 void AAvatar::BeginPlay()
@@ -20,10 +19,6 @@ void AAvatar::BeginPlay()
 
 	WalkSpeed = GetCharacterMovement()->MaxWalkSpeed;
 
-	Camera->bUsePawnControlRotation = false;
-	Arm->bUsePawnControlRotation = true;
-	bUseControllerRotationYaw = false;
-	GetCharacterMovement()->bOrientRotationToMovement = true;
 }
 
 void AAvatar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -58,6 +53,27 @@ void AAvatar::MoveRight(float Scale)
 
 void AAvatar::Shoot()
 {
-	const USkeletalMeshSocket* FireLocRef = GetMesh()->GetSocketByName("Muzzle");
+ 
+	
 
+    FVector Start = GetActorLocation();
+    FVector End(Start + GetActorForwardVector() * 1000);
+
+    FHitResult HitResult;
+    GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_Visibility);
+
+    if (HitResult.bBlockingHit)
+    {
+        DrawDebugLine(GetWorld(), Start, HitResult.Location, FColor::Red, false, 2);
+        DrawDebugSphere(GetWorld(), HitResult.Location, 10, 10, FColor::Blue, false, 2);
+        UE_LOG(LogTemp, Log, TEXT("Hit at location: %s"), *HitResult.Location.ToString());
+		if (true)
+		{
+
+		}
+    }
+    else
+    {
+        UE_LOG(LogTemp, Log, TEXT("No hit detected."));
+    }
 }

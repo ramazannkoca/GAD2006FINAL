@@ -3,7 +3,7 @@
     "Data": {
         "Source": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\private\\avatar.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\advgamefinaleditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\advgamefinaleditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
         "Includes": [
             "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advgamefinal\\definitions.advgamefinal.h",
             "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\avatar.h",
@@ -39,7 +39,9 @@
             "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\networkpredictioninterface.generated.h",
             "d:\\ue_5.3\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
-            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h"
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\skeletalmeshsocket.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\skeletalmeshsocket.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

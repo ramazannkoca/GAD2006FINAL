@@ -1,0 +1,31 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\enemybase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\advgamefinaleditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advgamefinal\\definitions.advgamefinal.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\enemybase.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\avatar.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\avatarbase.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\avatarbase.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\avatar.generated.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\enemybase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

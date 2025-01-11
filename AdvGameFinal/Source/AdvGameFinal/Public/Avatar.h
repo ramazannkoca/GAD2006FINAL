@@ -17,12 +17,8 @@ class AAvatar : public AAvatarBase
 public:
 	AAvatar();
 
+	
 
-	UPROPERTY(EditAnywhere)
-	UCameraComponent* Camera;
-
-	UPROPERTY(EditAnywhere)
-	USpringArmComponent* Arm;
 
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
