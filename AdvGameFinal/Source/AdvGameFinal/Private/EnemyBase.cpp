@@ -16,7 +16,12 @@ AEnemyBase::AEnemyBase()
 void AEnemyBase::BeginPlay()
 {
 	Super::BeginPlay();
-	ChasePlayer();
+    if (!bFromTutorial)
+    {
+        ChasePlayer();
+    }
+    
+	
 }
 
 // Called every frame
@@ -53,14 +58,17 @@ void AEnemyBase::ChasePlayer()
 
     float DistanceToPlayer = FVector::Dist(EnemyLocation, PlayerLocation);
 
-    if (DistanceToPlayer <= 5.0f)
+    if (DistanceToPlayer <= 0)
     {
         UE_LOG(LogTemp, Log, TEXT("Enemy is already close to the player."));
         AIController->StopMovement(); 
+
         return;
     }
-
-    AIController->MoveToActor(PlayerRef, 5.0f); 
+    
+    AIController->MoveToActor(PlayerRef, 0); 
     UE_LOG(LogTemp, Log, TEXT("Enemy is chasing the player."));
+
+    
 }
 

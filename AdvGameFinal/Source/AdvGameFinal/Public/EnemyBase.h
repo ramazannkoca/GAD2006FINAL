@@ -32,5 +32,8 @@ public:
 	void ChasePlayer();
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	AAvatar* PlayerRef;
+	AAvatar* PlayerRef ;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	bool bFromTutorial;
 };

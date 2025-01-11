@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\private\\road.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\advgamefinaleditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\advgamefinal\\definitions.advgamefinal.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\source\\advgamefinal\\public\\road.h",
+            "c:\\users\\ramaz\\documents\\github\\gad2006final\\advgamefinal\\intermediate\\build\\win64\\unrealeditor\\inc\\advgamefinal\\uht\\road.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

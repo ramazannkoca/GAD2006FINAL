@@ -5,6 +5,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Engine/SkeletalMeshSocket.h"
+#include "EnemyBase.h"
 #include "DrawDebugHelpers.h"
 
 
@@ -31,8 +32,6 @@ void AAvatar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("MoveForward", this, &AAvatar::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AAvatar::MoveRight);
 
-
-
 }
 
 void AAvatar::MoveForward(float Scale)
@@ -51,29 +50,52 @@ void AAvatar::MoveRight(float Scale)
 	AddMovementInput(ForwardDirection, Scale * MovementState);
 }
 
+void AAvatar::Dash()
+{
+    if (bCanDash)
+    {
+        FVector Velocity = GetVelocity() * 5;
+        FVector DashDirection(Velocity.X, Velocity.Y, 0);
+        LaunchCharacter(DashDirection, false, false);
+    }
+
+}
+
 void AAvatar::Shoot()
 {
- 
-	
-
     FVector Start = GetActorLocation();
-    FVector End(Start + GetActorForwardVector() * 1000);
+    FVector End = Start + GetActorForwardVector() * 100000;
 
     FHitResult HitResult;
-    GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_Visibility);
-
-    if (HitResult.bBlockingHit)
+    if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_Visibility))
     {
-        DrawDebugLine(GetWorld(), Start, HitResult.Location, FColor::Red, false, 2);
-        DrawDebugSphere(GetWorld(), HitResult.Location, 10, 10, FColor::Blue, false, 2);
-        UE_LOG(LogTemp, Log, TEXT("Hit at location: %s"), *HitResult.Location.ToString());
-		if (true)
-		{
+        DrawDebugLine(GetWorld(), Start, HitResult.Location, FColor::Red, false, 2.0f);
+        DrawDebugSphere(GetWorld(), HitResult.Location, 10.0f, 10, FColor::Blue, false, 2.0f);
 
-		}
+        UE_LOG(LogTemp, Log, TEXT("Hit at location: %s"), *HitResult.Location.ToString());
+
+        if (AActor* ActorRef = HitResult.GetActor())
+        {
+            UE_LOG(LogTemp, Log, TEXT("Hit Actor: %s"), *ActorRef->GetName());
+
+            // Check if it is an enemy
+            if (AEnemyBase* Enemy = Cast<AEnemyBase>(ActorRef))
+            {
+                UE_LOG(LogTemp, Log, TEXT("Enemy hit, destroying: %s"), *Enemy->GetName());
+                Enemy->Destroy();
+            }
+            else
+            {
+                UE_LOG(LogTemp, Warning, TEXT("Hit Actor is not an enemy."));
+            }
+        }
+        else
+        {
+            UE_LOG(LogTemp, Warning, TEXT("No valid actor hit."));
+        }
     }
     else
     {
-        UE_LOG(LogTemp, Log, TEXT("No hit detected."));
+        UE_LOG(LogTemp, Warning, TEXT("No hit detected."));
     }
 }

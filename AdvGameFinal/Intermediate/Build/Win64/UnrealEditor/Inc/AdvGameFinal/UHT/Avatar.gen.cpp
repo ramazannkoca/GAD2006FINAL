@@ -21,13 +21,43 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		P_THIS->Shoot();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AAvatar::execDash)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Dash();
+		P_NATIVE_END;
+	}
 	void AAvatar::StaticRegisterNativesAAvatar()
 	{
 		UClass* Class = AAvatar::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Dash", &AAvatar::execDash },
 			{ "Shoot", &AAvatar::execShoot },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAvatar_Dash_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAvatar_Dash_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Avatar.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAvatar_Dash_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAvatar, nullptr, "Dash", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAvatar_Dash_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAvatar_Dash_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AAvatar_Dash()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAvatar_Dash_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AAvatar_Shoot_Statics
 	{
@@ -81,6 +111,15 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bCanDash_MetaData[];
+#endif
+		static void NewProp_bCanDash_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanDash;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -91,6 +130,7 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAvatar_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAvatar_Dash, "Dash" }, // 478378133
 		{ &Z_Construct_UFunction_AAvatar_Shoot, "Shoot" }, // 2105311009
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::FuncInfo) < 2048);
@@ -125,10 +165,30 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAvatar, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash_MetaData[] = {
+		{ "Category", "Avatar" },
+		{ "ModuleRelativePath", "Public/Avatar.h" },
+	};
+#endif
+	void Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash_SetBit(void* Obj)
+	{
+		((AAvatar*)Obj)->bCanDash = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash = { "bCanDash", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AAvatar), &Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAvatar_Statics::NewProp_Health_MetaData[] = {
+		{ "Category", "Avatar" },
+		{ "ModuleRelativePath", "Public/Avatar.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAvatar_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAvatar, Health), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAvatar_Statics::NewProp_Health_MetaData), Z_Construct_UClass_AAvatar_Statics::NewProp_Health_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAvatar_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_RunSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_MovementState,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_WalkSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_bCanDash,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAvatar_Statics::NewProp_Health,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAvatar_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAvatar>::IsAbstract,
@@ -168,9 +228,9 @@ void EmptyLinkFunctionForGeneratedCodeAvatar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 3655805671U) },
+		{ Z_Construct_UClass_AAvatar, AAvatar::StaticClass, TEXT("AAvatar"), &Z_Registration_Info_UClass_AAvatar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAvatar), 572424510U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_449270150(TEXT("/Script/AdvGameFinal"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_3341310439(TEXT("/Script/AdvGameFinal"),
 		Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

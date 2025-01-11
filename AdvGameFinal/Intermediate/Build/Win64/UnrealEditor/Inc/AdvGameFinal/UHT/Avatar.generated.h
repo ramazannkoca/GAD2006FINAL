@@ -19,7 +19,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execShoot);
+	DECLARE_FUNCTION(execShoot); \
+	DECLARE_FUNCTION(execDash);
 
 
 #define FID_AdvGameFinal_Source_AdvGameFinal_Public_Avatar_h_15_ACCESSORS

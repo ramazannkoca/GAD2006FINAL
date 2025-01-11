@@ -28,6 +28,11 @@ private:
 	void MoveForward(float Scale);
 	void MoveRight(float Scale);
 
+	UFUNCTION(BlueprintCallable)
+	void Dash();
+
+
+
 public:
 
 	UPROPERTY(EditAnywhere)
@@ -39,11 +44,19 @@ public:
 	UPROPERTY(EditAnywhere)
 	float WalkSpeed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bCanDash = true;
+
+
 public:
 	//combat
 
 	UFUNCTION(BlueprintCallable)
 	void Shoot();
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float Health = 100.0f;
+
 
 
 

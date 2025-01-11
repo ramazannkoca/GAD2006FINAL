@@ -68,6 +68,11 @@ void EmptyLinkFunctionForGeneratedCodeEnemyBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_PlayerRef_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerRef;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bFromTutorial_MetaData[];
+#endif
+		static void NewProp_bFromTutorial_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bFromTutorial;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -95,8 +100,20 @@ void EmptyLinkFunctionForGeneratedCodeEnemyBase() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_PlayerRef = { "PlayerRef", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, PlayerRef), Z_Construct_UClass_AAvatar_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyBase_Statics::NewProp_PlayerRef_MetaData), Z_Construct_UClass_AEnemyBase_Statics::NewProp_PlayerRef_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial_MetaData[] = {
+		{ "Category", "EnemyBase" },
+		{ "ModuleRelativePath", "Public/EnemyBase.h" },
+	};
+#endif
+	void Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial_SetBit(void* Obj)
+	{
+		((AEnemyBase*)Obj)->bFromTutorial = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial = { "bFromTutorial", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AEnemyBase), &Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial_MetaData), Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_PlayerRef,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_bFromTutorial,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemyBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemyBase>::IsAbstract,
@@ -136,9 +153,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemyBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_EnemyBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 850891355U) },
+		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 1103464792U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_EnemyBase_h_2902715613(TEXT("/Script/AdvGameFinal"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_EnemyBase_h_301290026(TEXT("/Script/AdvGameFinal"),
 		Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_EnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdvGameFinal_Source_AdvGameFinal_Public_EnemyBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
